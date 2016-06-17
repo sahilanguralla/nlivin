@@ -4,28 +4,40 @@ Home
 @endsection
 @section('content')
 <div class="v-spacer-2">&nbsp;</div>
-<div class="ui one column grid">
-	<div class="ui right aligned secondary menu wd-100pc">
-	  <div class="right menu">
-	    <div class="item">
-	      <div class="ui icon input">
-	        <input placeholder="Search..." type="text">
-	        <i class="search link icon"></i>
-	      </div>
-	    </div>
-	  </div>
-	</div>
-</div>
 <div class="ui centered grid">
+	<div class="fifteen wide computer only twelve wide tablet only column">
+		<div class="ui secondary menu">
+		  <div class="right menu">
+		    <div class="item">
+		      <div class="ui icon input">
+		        <input placeholder="Search..." type="text">
+		        <i class="search link icon"></i>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+	</div>
+	<div class="twelve wide mobile only column">
+		<div class="ui secondary menu wd-100pc">
+		  <div class="menu wd-100pc">
+		    <div class="item wd-100pc">
+		      <div class="ui icon input wd-100pc">
+		        <input class="wd-100pc" placeholder="Search..." type="text">
+		        <i class="search link icon"></i>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+	</div>
 	@foreach($quotes as $quote)
-	<div class="four wide computer six wide tablet twelve wide mobile column">
+	<div class="five wide computer six wide tablet twelve wide mobile column">
 		<div class="ui card wd-100pc {{ array("red", "orange", "yellow", "olive", "green", "teal", "blue", "violet", "purple", "pink", "brown", "grey", "black")[rand(0, 12)] }}">
 			<div class="content">
 				<div class="ui small feed">
 					<div class="v-spacer-0-25"></div>
 					<div class="event">
 						<div class="content">
-							<div class="font-1-2 min-ht-100px">
+							<div class="font-1-2 min-ht-gt-mobile-100px">
 								{{ $quote->message }}
 							</div>
 						</div>

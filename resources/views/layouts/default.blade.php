@@ -21,18 +21,18 @@
 	@yield('head-styles')
 	@yield('head-scripts')
 </head>
-<body>
-	@include('_partials.header')
-	<div class="ui container">
-		<div class="ui row">
+<body class="pushable">
+	<div class="pusher">
+		@include('_partials.header')
+		<div class="ui grid">
 			<div class="column">
 				@yield('content')
 			</div>
 		</div>
+		@include('_partials.footer')
+		<script type="text/javascript" src="{{ URL::to('bower_components/jquery/dist/jquery.min.js') }}"></script>
+		<script type="text/javascript" src="{{ URL::to('bower_components/semantic/dist/semantic.min.js') }}"></script>
+		@yield('body-scripts')
 	</div>
-	@include('_partials.footer')
-	<script type="text/javascript" src="{{ URL::to('bower_components/jquery/dist/jquery.min.js') }}"></script>
-	<script type="text/javascript" src="{{ URL::to('bower_components/semantic/dist/semantic.min.js') }}"></script>
-	@yield('body-scripts')
 </body>
 </html>
