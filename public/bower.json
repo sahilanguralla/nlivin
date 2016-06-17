@@ -1,0 +1,24 @@
+{
+  "name": "nlivin",
+  "authors": [
+    "Sahil Anguralla <anguralla.sahil@gmail.com>"
+  ],
+  "description": "Get inspired and Determined with quotes by famous personalities",
+  "main": "",
+  "moduleType": [
+    "es6"
+  ],
+  "license": "MIT",
+  "homepage": "http://nliv.in",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "semantic": "semantic-ui#~2.1.8"
+  }
+}
