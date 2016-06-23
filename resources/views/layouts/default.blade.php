@@ -17,6 +17,23 @@
 	</title>
 	<link rel="stylesheet" href="{{ URL::to('bower_components/semantic/dist/semantic.min.css') }}">
 	<link rel="stylesheet" href="{{ URL::to('bower_components/acssist/dist/acssist.min.css') }}">
+	<script>
+		window.fbAsyncInit = function() {
+			FB.init({
+				appId      : '1169963956388351',
+				xfbml      : true,
+				version    : 'v2.6'
+			});
+		};
+
+		(function(d, s, id){
+			 var js, fjs = d.getElementsByTagName(s)[0];
+			 if (d.getElementById(id)) {return;}
+			 js = d.createElement(s); js.id = id;
+			 js.src = "//connect.facebook.net/en_US/sdk.js";
+			 fjs.parentNode.insertBefore(js, fjs);
+		 }(document, 'script', 'facebook-jssdk'));
+	</script>
 	<link rel="stylesheet" href="{{ URL::to('assets/css/index.css') }}">
 	@yield('head-styles')
 	@yield('head-scripts')
@@ -24,7 +41,7 @@
 <body class="pushable">
 	<div class="pusher">
 		@include('_partials.header')
-		<div class="ui grid">
+		<div class="ui container">
 			<div class="column">
 				@yield('content')
 			</div>
