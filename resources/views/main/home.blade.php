@@ -55,6 +55,12 @@ Home
 				<button class="circular ui icon button">
 				  <i class="heart icon"></i>
 				</button>
+				<div
+				  class="fb-like"
+				  data-share="true"
+				  data-width="450"
+				  data-show-faces="true">
+				</div>
 				<img class="right floated mini ui image" src="{{ URL::to('assets/images/avatars/'. ($quote->author->avatar)) }}">
 			</div>
 		</div>
