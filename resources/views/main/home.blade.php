@@ -55,9 +55,12 @@ Home
 				<button class="circular ui icon button">
 				  <i class="heart icon"></i>
 				</button>
-				<button class="ui circular facebook icon button fb-share-button" data-picture="{{ URL::to('assets/images/avatars/'. ($quote->author->avatar)) }}" data-author="{{ $quote->author->name }}" data-desc="{{ $quote->message }}">
+				<button class="ui circular facebook icon button fb-share-button" data-picture="{{ URL::to('assets/images/avatars/'. ($quote->author->avatar)) }}" data-author="{{ $quote->author->name }}" data-desc="{{ $quote->message }}" data-link="{{ URL::route('home')}}">
 				  <i class="facebook icon"></i>
 				</button>
+				<a class="ui circular green icon button whatsapp-share-button" href="whatsapp://send?text=The text to share!" data-action="share/whatsapp/share" data-picture="{{ URL::to('assets/images/avatars/'. ($quote->author->avatar)) }}" data-author="{{ $quote->author->name }}" data-desc="{{ $quote->message }}" data-link="{{ URL::route('home')}}">
+				  <i class="whatsapp icon"></i>
+				</a>
 				<img class="right floated mini ui image" src="{{ URL::to('assets/images/avatars/'. ($quote->author->avatar)) }}">
 			</div>
 		</div>
