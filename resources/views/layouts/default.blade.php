@@ -10,6 +10,7 @@
 	<meta property="og:url" content="http://nliv.in/">
 	<meta property="og:image" content="{{ URL::to('assets/images/logo.png') }}">
 	<meta property="og:type" content="blog"/>
+	<meta property="fb:appid" content="1169963956388351"/>
 	<link rel="icon" type="image/png" href="{{ URL::to('assets/images/logo.png') }}" />
 	<link rel=”author” href="https://plus.google.com/113017778829293740735">
 	<title>
@@ -34,6 +35,7 @@
 			 fjs.parentNode.insertBefore(js, fjs);
 		 }(document, 'script', 'facebook-jssdk'));
 	</script>
+	<script type="text/javascript" src="{{ URL::to('assets/js/index.js') }}"></script>
 	<link rel="stylesheet" href="{{ URL::to('assets/css/index.css') }}">
 	@yield('head-styles')
 	@yield('head-scripts')

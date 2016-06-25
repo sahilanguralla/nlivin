@@ -55,12 +55,9 @@ Home
 				<button class="circular ui icon button">
 				  <i class="heart icon"></i>
 				</button>
-				<div
-				  class="fb-like"
-				  data-share="true"
-				  data-width="450"
-				  data-show-faces="true">
-				</div>
+				<button class="ui circular facebook icon button fb-share-button" data-picture="{{ URL::to('assets/images/avatars/'. ($quote->author->avatar)) }}" data-author="{{ $quote->author->name }}" data-desc="{{ $quote->message }}">
+				  <i class="facebook icon"></i>
+				</button>
 				<img class="right floated mini ui image" src="{{ URL::to('assets/images/avatars/'. ($quote->author->avatar)) }}">
 			</div>
 		</div>
