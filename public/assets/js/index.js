@@ -1,9 +1,10 @@
 window.onload = function() {
 	$(".fb-share-button").click(function(event) {
-		var desc = $(this).data('desc');	
-		var caption = $(this).data('author');	
-		var picture = $(this).data('picture');	
-		var link = $(this).data('link');	
+		var target = $($(this).data("target"));
+		var desc = target.data('desc');	
+		var caption = target.data('author');	
+		var picture = target.data('picture');	
+		var link = target.data('link');	
 		var name = 'A Quote by ' + caption;	
 		FB.ui({
 		  method: 'feed',
@@ -12,5 +13,13 @@ window.onload = function() {
 		  description: desc,
 		  picture: picture 
 		}, function(response){});
+	});
+	$(".whatsapp-share-button").click(function(event) {
+		var target = $($(this).data("target"));
+		var desc = target.data('desc');	
+		var caption = target.data('author');	
+		var picture = target.data('picture');	
+		var link = target.data('link');	
+		$(this).attr("href", "whatsapp://send?text=" + desc + " - " + caption + " - More at " + link);	
 	})
 }
