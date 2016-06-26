@@ -45,7 +45,22 @@ Home
 					<div class="event">
 						<div class="content">
 							<div class="summary right aligned">
-								- {{ $quote->author->name }}
+								- 
+								<a href="{{ URL::route("quotes-by-author", ["author_id" => $quote->author->id]) }}">
+									{{ $quote->author->name }}
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="event">
+						<div class="content">
+							<div class="summary">
+								@foreach($quote->tags as $tag)
+
+								<a class="ui label teal" href="{{ URL::route("quotes-by-tag", ["tag_id" => $tag->id]) }}">
+								  {{ $tag->name }}
+								</a>
+								@endforeach
 							</div>
 						</div>
 					</div>
@@ -58,7 +73,7 @@ Home
 				<button class="ui circular facebook icon button fb-share-button" data-target="#quote-{{ $quote->id }}">
 				  <i class="facebook icon"></i>
 				</button>
-				<a class="ui circular green icon button whatsapp-share-button" href="whatsapp://send?text=The text to share!" data-action="share/whatsapp/share" data-target="#quote-{{ $quote->id }}">
+				<a class="ui circular green icon button whatsapp-share-button" href="whatsapp://send" data-action="share/whatsapp/share" data-target="#quote-{{ $quote->id }}">
 				  <i class="whatsapp icon"></i>
 				</a>
 				<img class="right floated mini ui image" src="{{ URL::to('assets/images/avatars/'. ($quote->author->avatar)) }}">

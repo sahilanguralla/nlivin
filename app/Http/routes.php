@@ -17,4 +17,12 @@ Route::group(['middleware' => ['web']], function() {
 		'uses' => 'HomeController@getIndex',
 		'as' => 'home'
 	]);
+	Route::get('/quotes/tags/{tag_id}', [
+		'uses' => 'QuoteController@getByTag',
+		'as' => 'quotes-by-tag'
+	]);
+	Route::get('/quotes/authors/{author_id}', [
+		'uses' => 'QuoteController@getByAuthor',
+		'as' => 'quotes-by-author'
+	]);
 });
